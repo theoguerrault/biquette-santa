@@ -283,7 +283,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ state, onUpdateState, on
       <div className="modal-backdrop" onClick={onClose}>
         <div className="modal-container admin-login-card text-center" onClick={e => e.stopPropagation()}>
           <h2 className="modal-title" style={{ marginBottom: '1.2rem' }}>
-            gerer le basar
+            Gérer le basar
           </h2>
 
           <form onSubmit={handleLogin} className="reveal-form">
@@ -312,13 +312,13 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ state, onUpdateState, on
   }
 
   return (
-    <div className="modal-backdrop" onClick={onClose}>
+    <div className="modal-backdrop admin-backdrop" onClick={onClose}>
       <div className="admin-modal-container" onClick={e => e.stopPropagation()}>
         {/* En-tête Admin */}
         <header className="admin-header">
           <div className="admin-title-area">
             <h2 className="admin-main-title">
-              <Sparkles size={22} className="gold" /> Gerer le basar
+              <Sparkles size={22} className="gold" /> Gérer le basar
             </h2>
             <p className="admin-subtitle">Gérez les participants, liens d'accès, exclusions et le tirage.</p>
           </div>

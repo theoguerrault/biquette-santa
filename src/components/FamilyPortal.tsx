@@ -91,11 +91,11 @@ export const FamilyPortal: React.FC<FamilyPortalProps> = ({
           <div className="alert-content">
             <h3>Le tirage au sort n’est pas encore lancé !</h3>
             <p>
-              Mr Jack (l’organisateur) doit d’abord valider les règles et cliquer sur <strong>« Lancer le tirage »</strong> dans Gerer le basar.
+              Mr Jack (l’organisateur) doit d’abord valider les règles et cliquer sur <strong>« Lancer le tirage »</strong> dans Gérer le basar.
             </p>
           </div>
           <button onClick={onOpenAdmin} className="btn-secondary btn-sm">
-            Gerer le basar
+            Gérer le basar
           </button>
         </div>
       )}
@@ -154,7 +154,7 @@ export const FamilyPortal: React.FC<FamilyPortalProps> = ({
       {/* Footer épuré */}
       <footer className="portal-footer">
         <button onClick={onOpenAdmin} className="admin-link-btn">
-          <User size={14} /> Gerer le basar
+          <User size={14} /> Gérer le basar
         </button>
       </footer>
 
