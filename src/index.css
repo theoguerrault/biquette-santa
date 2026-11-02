@@ -113,12 +113,12 @@ body {
 .header-tool-btn.active {
   color: #fff;
   border-color: var(--red-festive);
-  background: linear-gradient(135deg, rgba(220, 38, 38, 0.85) 0%, rgba(185, 28, 28, 0.95) 100%);
-  box-shadow: 0 0 14px rgba(220, 38, 38, 0.35);
+  background: linear-gradient(135deg, rgba(194, 40, 56, 0.85) 0%, rgba(165, 29, 44, 0.95) 100%);
+  box-shadow: 0 0 14px var(--red-glow);
 }
 
 .admin-access-btn {
-  background: rgba(244, 208, 111, 0.12);
+  background: rgba(245, 212, 133, 0.12);
   border: 1px solid var(--border-gold);
   color: var(--gold-primary);
   padding: 0.5rem 0.85rem;
@@ -160,7 +160,7 @@ body {
   align-items: center;
   gap: 0.4rem;
   padding: 0.3rem 0.8rem;
-  background: rgba(244, 208, 111, 0.12);
+  background: rgba(245, 212, 133, 0.12);
   border: 1px solid var(--border-gold);
   border-radius: var(--radius-full);
   color: var(--gold-primary);
@@ -178,7 +178,7 @@ body {
   background: linear-gradient(135deg, #ffffff 30%, var(--gold-light) 75%, var(--gold-primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 4px 18px rgba(244, 208, 111, 0.2));
+  filter: drop-shadow(0 4px 18px var(--gold-glow));
 }
 
 .hero-callout {
@@ -244,8 +244,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
-  background: rgba(217, 56, 71, 0.15);
-  border: 1px solid rgba(217, 56, 71, 0.4);
+  background: rgba(194, 40, 56, 0.15);
+  border: 1px solid rgba(194, 40, 56, 0.4);
   padding: 1.2rem;
   border-radius: var(--radius-md);
   margin-bottom: 2rem;
@@ -347,12 +347,12 @@ body {
   background: var(--bg-card-hover);
   border-color: var(--border-gold);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px -6px rgba(0, 0, 0, 0.6), 0 0 16px rgba(244, 208, 111, 0.18);
+  box-shadow: 0 10px 25px -6px rgba(0, 0, 0, 0.6), 0 0 16px rgba(245, 212, 133, 0.18);
 }
 
 .my-profile-card {
   border-color: var(--gold-primary);
-  background: rgba(244, 208, 111, 0.08);
+  background: rgba(245, 212, 133, 0.08);
   box-shadow: 0 0 22px var(--gold-glow);
 }
 
@@ -371,7 +371,7 @@ body {
   height: 58px;
   border-radius: var(--radius-full);
   padding: 2px;
-  background: linear-gradient(135deg, var(--gold-primary) 0%, rgba(217, 56, 71, 0.8) 100%);
+  background: linear-gradient(135deg, var(--gold-primary) 0%, rgba(194, 40, 56, 0.8) 100%);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
   flex-shrink: 0;
   transition: transform 0.25s ease;
@@ -412,7 +412,7 @@ body {
 }
 
 .admin-tag {
-  background: rgba(244, 208, 111, 0.15);
+  background: rgba(245, 212, 133, 0.15);
   border: 1px solid var(--border-gold);
   color: var(--gold-primary);
   font-size: 0.65rem;
@@ -429,7 +429,7 @@ body {
 }
 
 .card-open-btn {
-  background: rgba(244, 208, 111, 0.12);
+  background: rgba(245, 212, 133, 0.12);
   border: 1px solid var(--border-gold);
   color: var(--gold-primary);
   width: 44px;
@@ -570,7 +570,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--gold-primary);
-  background: rgba(244, 208, 111, 0.12);
+  background: rgba(245, 212, 133, 0.12);
   padding: 0.25rem 0.65rem;
   border-radius: var(--radius-full);
   margin-bottom: 0.6rem;
@@ -739,7 +739,7 @@ body {
 
 .custom-input.input-error {
   border-color: var(--red-festive);
-  box-shadow: 0 0 10px rgba(217, 56, 71, 0.3);
+  box-shadow: 0 0 10px rgba(194, 40, 56, 0.3);
 }
 
 .custom-datepicker {
@@ -775,7 +775,7 @@ body {
 
 /* Buttons Mobile First */
 .btn-primary {
-  background: linear-gradient(135deg, #f4d06f 0%, #e5b94c 100%);
+  background: linear-gradient(135deg, var(--gold-primary) 0%, #e5b94c 100%);
   color: #0b1220;
   border: none;
   padding: 0.85rem 1.4rem;
@@ -969,7 +969,7 @@ body {
   width: 100%;
   min-height: 48px;
   transition: all 0.25s ease;
-  box-shadow: 0 6px 20px rgba(217, 56, 71, 0.4);
+  box-shadow: 0 6px 20px var(--red-glow);
 }
 
 .btn-secret-close:hover, .btn-secret-close:active {
@@ -1249,7 +1249,7 @@ body {
   font-size: 0.62rem;
   font-weight: 700;
   color: var(--gold-primary);
-  background: rgba(244, 208, 111, 0.15);
+  background: rgba(245, 212, 133, 0.15);
   padding: 0.1rem 0.35rem;
   border-radius: var(--radius-full);
   margin-left: 0.4rem;
@@ -1282,7 +1282,7 @@ body {
 }
 
 .btn-copy-msg {
-  background: rgba(244, 208, 111, 0.1);
+  background: rgba(245, 212, 133, 0.1);
   border: 1px solid var(--border-gold);
   color: var(--gold-primary);
   padding: 0.45rem 0.85rem;
@@ -1310,7 +1310,7 @@ body {
 
 /* Draw Action Banner */
 .draw-action-banner {
-  background: linear-gradient(135deg, rgba(244, 208, 111, 0.1) 0%, rgba(30, 90, 64, 0.2) 100%);
+  background: linear-gradient(135deg, rgba(245, 212, 133, 0.1) 0%, rgba(30, 90, 64, 0.2) 100%);
   border: 1px solid var(--border-gold);
   border-radius: var(--radius-md);
   padding: 1.2rem;
@@ -1500,7 +1500,7 @@ body {
   color: #f87171;
   cursor: pointer;
   padding: 0.5rem;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1595,8 +1595,8 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(217, 56, 71, 0.12);
-  border: 1px solid rgba(217, 56, 71, 0.3);
+  background: rgba(194, 40, 56, 0.12);
+  border: 1px solid rgba(194, 40, 56, 0.3);
   padding: 0.4rem 0.75rem;
   border-radius: var(--radius-full);
   font-size: 0.8rem;
@@ -1633,7 +1633,7 @@ body {
 
 .btn-danger-outline {
   background: transparent;
-  border: 1px solid rgba(217, 56, 71, 0.5);
+  border: 1px solid rgba(194, 40, 56, 0.5);
   color: #f87171;
   padding: 0.65rem 1.1rem;
   border-radius: var(--radius-md);
@@ -1645,7 +1645,7 @@ body {
 }
 
 .btn-danger-outline:hover {
-  background: rgba(217, 56, 71, 0.15);
+  background: rgba(194, 40, 56, 0.15);
   border-color: #f87171;
 }
 
@@ -1706,7 +1706,7 @@ body {
 
 .avatar-option-card.selected {
   border-color: var(--gold-primary);
-  background: rgba(244, 208, 111, 0.12);
+  background: rgba(245, 212, 133, 0.12);
 }
 
 .avatar-img-preview {
