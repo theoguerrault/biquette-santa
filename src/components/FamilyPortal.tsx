@@ -79,6 +79,9 @@ export const FamilyPortal: React.FC<FamilyPortalProps> = ({
       {/* Hero Header */}
       <header className="portal-hero">
         <h1 className="hero-title">{state.config.title}</h1>
+        <p className="hero-callout">
+          Choisi ton personnage, tu sauras te reconnaitre
+        </p>
         <p className="hero-description">
           Tout cadeau supplémentaire offert à Mr Jack sera fortement apprécié
         </p>
