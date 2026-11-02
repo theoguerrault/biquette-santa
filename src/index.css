@@ -844,37 +844,39 @@ body {
 
 .biquette-letter {
   text-align: left;
-  background: rgba(255, 255, 255, 0.035);
-  border: 1px solid var(--border-glass);
-  border-radius: var(--radius-md);
-  padding: 1.15rem;
-  margin-bottom: 1.35rem;
-  font-size: 0.92rem;
-  line-height: 1.55;
+  background: transparent;
+  border: none;
+  border-left: 2px solid rgba(245, 212, 133, 0.35);
+  border-radius: 0;
+  padding: 0.2rem 0 0.2rem 1.1rem;
+  margin-bottom: 1.6rem;
+  font-size: 0.93rem;
+  line-height: 1.65;
   color: #e2e8f0;
 }
 
 .biquette-letter p {
-  margin: 0 0 0.85rem 0;
+  margin: 0 0 0.8rem 0;
 }
 
 .biquette-letter .letter-greeting {
-  font-weight: 700;
-  color: var(--gold-primary);
-  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .letter-ps-group {
-  margin-top: 0.9rem;
-  padding-top: 0.8rem;
-  border-top: 1px dashed rgba(244, 208, 111, 0.25);
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
 }
 
 .letter-ps {
-  font-size: 0.87rem;
-  color: #f1f5f9;
+  font-size: 0.85rem;
+  color: #94a3b8;
   font-style: italic;
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 0.45rem !important;
 }
 
 .letter-ps:last-child {
@@ -892,12 +894,12 @@ body {
 }
 
 .target-reveal-box {
-  background: linear-gradient(135deg, rgba(244, 208, 111, 0.15) 0%, rgba(217, 56, 71, 0.2) 100%);
-  border: 2px solid var(--gold-primary);
-  border-radius: var(--radius-lg);
-  padding: 1.6rem 1.1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  padding: 1.35rem 1rem 1.25rem;
   margin-bottom: 1.3rem;
-  box-shadow: 0 0 35px var(--gold-glow);
+  box-shadow: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -905,24 +907,24 @@ body {
 
 .target-ribbon {
   display: inline-block;
-  background: var(--red-festive);
-  color: #fff;
+  background: transparent;
+  color: var(--gold-primary);
   font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  padding: 0.25rem 0.85rem;
-  border-radius: var(--radius-full);
-  margin-bottom: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0;
+  margin-bottom: 0.85rem;
 }
 
 .target-avatar-container {
-  width: 90px;
-  height: 90px;
+  width: 76px;
+  height: 76px;
   border-radius: var(--radius-full);
-  padding: 3px;
+  padding: 2px;
   background: linear-gradient(135deg, var(--gold-primary) 0%, var(--red-festive) 100%);
-  box-shadow: 0 0 20px var(--gold-glow);
-  margin-bottom: 0.9rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  margin-bottom: 0.75rem;
 }
 
 .target-avatar-img {
@@ -935,39 +937,42 @@ body {
 
 .target-name {
   font-family: var(--font-serif);
-  font-size: clamp(1.7rem, 4vw, 2.3rem);
-  font-weight: 800;
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  font-weight: 700;
   color: #ffffff;
-  text-shadow: 0 2px 14px rgba(244, 208, 111, 0.6);
   letter-spacing: -0.01em;
+  text-shadow: none;
 }
 
 .event-info-pill {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-glass);
-  border-radius: var(--radius-md);
-  padding: 0.75rem 0.9rem;
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--border-glass);
+  padding: 0.75rem 0.5rem 0.25rem;
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 1.1rem;
+  justify-content: center;
+  gap: 1.6rem;
+  margin-bottom: 1.4rem;
 }
 
 .info-item {
   display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.86rem;
 }
 
 .info-label {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   color: var(--text-dim);
   text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .info-value {
-  font-size: 0.92rem;
-  font-weight: 700;
-  color: var(--gold-primary);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-main);
 }
 
 .event-note-quote {
