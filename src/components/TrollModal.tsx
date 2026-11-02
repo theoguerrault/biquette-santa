@@ -59,7 +59,7 @@ export const TrollModal: React.FC<TrollModalProps> = ({ onClose }) => {
           )}
 
           <button onClick={handleConfess} className="btn-primary btn-troll">
-            Je suis un vilain petit canard
+            Fermer avec déception
           </button>
         </div>
       </div>
