@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import type { Participant, EncryptedAssignment, EventConfig } from '../types/santa';
 import { decryptSecret } from '../services/cryptoService';
 import { playJingleBells } from '../services/soundEffects';
-import { formatDate } from './FamilyPortal';
 import { PARTNERS_MAP } from '../services/storageService';
 import confetti from 'canvas-confetti';
 import { X } from 'lucide-react';
@@ -11,7 +10,7 @@ interface RevealModalProps {
   participant: Participant;
   participants: Participant[];
   assignment?: EncryptedAssignment;
-  config: EventConfig;
+  config?: EventConfig;
   userCode: string;
   onClose: () => void;
 }
@@ -20,7 +19,6 @@ export const RevealModal: React.FC<RevealModalProps> = ({
   participant,
   participants,
   assignment,
-  config,
   userCode,
   onClose
 }) => {
@@ -140,17 +138,6 @@ export const RevealModal: React.FC<RevealModalProps> = ({
               )}
 
               <div className="target-name">{targetName}</div>
-            </div>
-
-            <div className="event-info-pill">
-              <div className="info-item">
-                <span className="info-label">Budget :</span>
-                <span className="info-value">{config.budget} {config.currency}</span>
-              </div>
-              <div className="info-item">
-                <span className="info-label">Échange :</span>
-                <span className="info-value">{formatDate(config.date)}</span>
-              </div>
             </div>
 
             <button

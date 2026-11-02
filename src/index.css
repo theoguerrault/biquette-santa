@@ -825,19 +825,23 @@ body {
   min-height: 34px;
 }
 
-/* Unboxed Card (Secret Reveal) */
+/* Unboxed Card (Secret Reveal Compact & Anti-Scroll) */
+.reveal-modal-direct {
+  padding: 1.4rem 1.25rem 1.2rem !important;
+}
+
 .gift-unboxed-card {
   text-align: center;
 }
 
 .unboxed-main-title {
   font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-size: clamp(1.35rem, 4.4vw, 1.65rem);
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.32;
   color: var(--gold-primary);
-  margin-bottom: 1.2rem;
-  padding: 0.25rem 2.8rem 0;
+  margin-bottom: 0.85rem;
+  padding: 0 2.4rem;
   letter-spacing: -0.01em;
   text-align: center;
 }
@@ -848,34 +852,34 @@ body {
   border: none;
   border-radius: 0;
   padding: 0;
-  margin-bottom: 1.6rem;
-  font-size: 0.93rem;
-  line-height: 1.65;
+  margin-bottom: 0.85rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
   color: #e2e8f0;
 }
 
 .biquette-letter p {
-  margin: 0 0 0.8rem 0;
+  margin: 0 0 0.45rem 0;
 }
 
 .biquette-letter .letter-greeting {
   font-weight: 600;
   color: var(--gold-light);
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+  font-size: 0.96rem;
+  margin-bottom: 0.35rem;
 }
 
 .letter-ps-group {
-  margin-top: 1rem;
-  padding-top: 0.75rem;
+  margin-top: 0.55rem;
+  padding-top: 0.45rem;
   border-top: 1px dashed rgba(255, 255, 255, 0.1);
 }
 
 .letter-ps {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #94a3b8;
   font-style: italic;
-  margin-bottom: 0.45rem !important;
+  margin-bottom: 0.2rem !important;
 }
 
 .letter-ps:last-child {
@@ -892,12 +896,13 @@ body {
   font-weight: 500;
 }
 
+/* Encart destinataire compact */
 .target-reveal-box {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: var(--radius-md);
-  padding: 1.35rem 1rem 1.25rem;
-  margin-bottom: 1.3rem;
+  padding: 0.65rem 0.8rem;
+  margin-bottom: 0.95rem;
   box-shadow: none;
   display: flex;
   flex-direction: column;
@@ -908,22 +913,22 @@ body {
   display: inline-block;
   background: transparent;
   color: var(--gold-primary);
-  font-size: 0.72rem;
+  font-size: 0.65rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 0;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.35rem;
 }
 
 .target-avatar-container {
-  width: 76px;
-  height: 76px;
+  width: 52px;
+  height: 52px;
   border-radius: var(--radius-full);
   padding: 2px;
   background: linear-gradient(135deg, var(--gold-primary) 0%, var(--red-festive) 100%);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
-  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  margin-bottom: 0.35rem;
 }
 
 .target-avatar-img {
@@ -936,44 +941,11 @@ body {
 
 .target-name {
   font-family: var(--font-serif);
-  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  font-size: clamp(1.35rem, 3.8vw, 1.7rem);
   font-weight: 700;
   color: #ffffff;
   letter-spacing: -0.01em;
-  text-shadow: none;
-}
-
-.event-info-pill {
-  background: transparent;
-  border: none;
-  border-top: 1px solid var(--border-glass);
-  padding: 0.85rem 0.5rem 0.35rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
-  margin-bottom: 1.4rem;
-}
-
-.info-item {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  font-size: 0.86rem;
-}
-
-.info-label {
-  font-size: 0.75rem;
-  color: var(--text-dim);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.info-value {
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--text-main);
+  line-height: 1.2;
 }
 
 .event-note-quote {
