@@ -1,6 +1,6 @@
 import type { AppState, Participant } from '../types/santa';
 
-const STORAGE_KEY = 'biquette_santa_family_2026_tokens_v4';
+const STORAGE_KEY = 'biquette_santa_family_2026_tokens_v5';
 
 export interface AvatarOption {
   id: string;
@@ -56,71 +56,71 @@ export const DEFAULT_EXCLUSIONS = [
 
 export const OFFICIAL_ENCRYPTED_DRAW = [
   {
-    giverId: "p1",
-    ciphertext: "46bb2f485eef643bfe1b8bc4086906240022e808f7e94e7c63250552273b5093",
-    iv: "f955cfb9f5c0514b585213b0",
-    salt: "60e67ad464488a8dc7f5896a1d24f4f1"
+    "giverId": "p3",
+    "ciphertext": "f64d51fc88544f0cca2f3703f2ab6f999e5cd88c82271a",
+    "iv": "2e8812cfb25ffe37ecfa6852",
+    "salt": "90a8464a1399a022951cdacc67d7b8fe"
   },
   {
-    giverId: "p7",
-    ciphertext: "dce5908405eda14b252b8ba60631cfd2e0724701bfdbcc75858a4aa282a7d795232d61095cda32ca",
-    iv: "67bd697a3ed4e3f98821de8c",
-    salt: "4813ddaf85913d4c4ccfa969b10926c4"
+    "giverId": "p1",
+    "ciphertext": "b23825ce7c9c5021facd48014bb42a45b87d2be4fc148eca485aee6e06922533b989",
+    "iv": "b7647efa83bc0e4b857f3775",
+    "salt": "7c3c3b3740540205102e757e37c14b71"
   },
   {
-    giverId: "p4",
-    ciphertext: "dbaa048a6a495a34d98a9e942b8c00d2cc07652764132d60b88edca4d67804520e",
-    iv: "268e7b218339cb2d26199f13",
-    salt: "f2229aaf79aa8d2050e4c82f1b4f90d9"
+    "giverId": "p5",
+    "ciphertext": "9df26789cf78de81d8922965504ccc2f33a589dfbdb1c54fa41685b7bec75ecfe5",
+    "iv": "7e55e7bccc20052ce2ab9b6a",
+    "salt": "04a4e147a4f391d49076429366c8cbd8"
   },
   {
-    giverId: "p9",
-    ciphertext: "99db74ac22287e8b4475e74f626c20f7ffb8dc57f47a49bb61603c3a8773020a00e5",
-    iv: "93770b21c84b639b407673d6",
-    salt: "9c9d01cc7f40a395fc429bc17b0d6338"
+    "giverId": "p9",
+    "ciphertext": "efd81c8a506f2e5db9cce1477c6c847dbf9ffd6c4dd25df542eca554e458bc1e02",
+    "iv": "d070f994698a800cb71aef02",
+    "salt": "101304bda8ac90b162b4e8129caa4132"
   },
   {
-    giverId: "p6",
-    ciphertext: "8f1a49df17c426713582ab10dec96e37be1bdc6358784504e20ba14685c575bf3a",
-    iv: "181794a47afebfbb43885e08",
-    salt: "09923c8669e44bdc49e3eaa5016c0a93"
+    "giverId": "p8",
+    "ciphertext": "09b12185b5b2aeb8536fdb9d2e4719033aee78d7fd8905a105f8bb86b47dd641af977ad09e454f3f",
+    "iv": "22cbc4414ab6584d38c9a4d0",
+    "salt": "d369c46f28db6f066f654eb743ebc3ad"
   },
   {
-    giverId: "p8",
-    ciphertext: "6239fed6a51cf738071743e262bd6dbd9a9a0fb899e0582b0e702ffd9c7828e33b1c",
-    iv: "839e2fb8daa0c70df36a22ee",
-    salt: "670a4435030fce7c7493b4dac8a2ea36"
+    "giverId": "p4",
+    "ciphertext": "f5e9d19403877a62ca81b1fb99598bd8fc73ccbf8c03ed3e70b52ac5f46bce771283",
+    "iv": "a9213da8711aa23766d50aa5",
+    "salt": "ca85416e949887eb9c122ef5bea5fc57"
   },
   {
-    giverId: "p3",
-    ciphertext: "9fd2206a9c21e1363b95effe7fb5d60da34a8c2e449d3772db65aff4",
-    iv: "4f13f43c72f801ee7414bea4",
-    salt: "0b788fe16a81aeab10dd3eb6ebfdf5d0"
+    "giverId": "p6",
+    "ciphertext": "cf5218f6469094250f6b25b1be3507a076e2b8399c9e53e56e64d74e",
+    "iv": "21e596331a5d1e12274267dc",
+    "salt": "6960acca759d1b1090b6a9a3783c1e05"
   },
   {
-    giverId: "p2",
-    ciphertext: "926b56c175d276673596d824a06819dd74a56339915f62e4db9b3efb9bb3714a6ad1",
-    iv: "7bbc4c7f2152d9f82dd86288",
-    salt: "95ea9d1f2679bf1d4bd122566ad5c76b"
+    "giverId": "p2",
+    "ciphertext": "feb18bcccf5bc9696ae1c8f224f8b68d124b346de81e440bb0251ab41bb3fe48",
+    "iv": "acfb283ab3426fe90bad197c",
+    "salt": "777d9733370b5f6888c603796c34be70"
   },
   {
-    giverId: "p5",
-    ciphertext: "102f76b49062cd29e408187a7fcd7b23aadac8f816dd7b",
-    iv: "3a647cfd4de36111749a738e",
-    salt: "1653bc5fad6123d97fb4ef70df394ac1"
+    "giverId": "p7",
+    "ciphertext": "af2c7f999043a1aad7dcdee1159a452727cd8df63da64bfcee8ca7938a7f2782c36e",
+    "iv": "e025213415f40d94d0cf955b",
+    "salt": "a3ccba9d1e80adf346d47f170ef35cec"
   }
 ];
 
 export const OFFICIAL_ADMIN_ASSIGNMENTS = {
-  p1: "Marie-Antoinette",
-  p7: "Jérémy-figue mi-raisin",
-  p4: "Professeur Xavier",
-  p9: "Juju de chaussette",
-  p6: "Emilie une pattes",
-  p8: "Cha plane pour moi",
-  p3: "Chachapristi",
-  p2: "Tomelette paysanne",
-  p5: "Mr Jack"
+  "p3": "Mr Jack",
+  "p1": "Tomelette paysanne",
+  "p5": "Professeur Xavier",
+  "p9": "Emilie une pattes",
+  "p8": "Jérémy-figue mi-raisin",
+  "p4": "Juju de chaussette",
+  "p6": "Chachapristi",
+  "p2": "Marie-Antoinette",
+  "p7": "Cha plane pour moi"
 };
 
 export const DEFAULT_STATE: AppState = {
