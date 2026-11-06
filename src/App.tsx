@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import type { AppState, CheatingLog } from './types/santa';
 import { loadAppState, saveAppState, parseUrlAuth } from './services/storageService';
-import { executeDraw } from './services/algorithm';
 import { Header } from './components/Header';
 import { SnowEffect } from './components/SnowEffect';
 import { FamilyPortal } from './components/FamilyPortal';
@@ -47,38 +46,33 @@ export const App: React.FC = () => {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
-  // Exécution d'un premier tirage automatique au premier démarrage si non encore fait
+  // Synchronisation avec le tirage officiel servi dans draw.json
   useEffect(() => {
-    if (!state.draw.isDrawn && state.participants.length >= 2) {
-      executeDraw(state.participants, state.exclusions).then(result => {
-        if (result.success && result.encryptedAssignments && result.assignments) {
-          const clearMap: Record<string, string> = {};
-          const participantMap = new Map(state.participants.map(p => [p.id, p]));
-          for (const [giverId, receiverId] of Object.entries(result.assignments)) {
-            const receiver = participantMap.get(receiverId);
-            if (receiver) clearMap[giverId] = receiver.name;
-          }
-
-          const initialDrawnState: AppState = {
-            ...state,
-            draw: {
-              isDrawn: true,
-              drawnAt: new Date().toLocaleDateString('fr-FR', {
-                day: 'numeric',
-                month: 'long',
-                hour: '2-digit',
-                minute: '2-digit'
-              }),
-              encryptedAssignments: result.encryptedAssignments,
-              clearAssignmentsForAdmin: clearMap
-            }
-          };
-
-          setState(initialDrawnState);
-          saveAppState(initialDrawnState);
+    fetch(`/draw.json?t=${Date.now()}`)
+      .then(res => {
+        if (!res.ok) throw new Error('Fichier draw.json non accessible');
+        return res.json();
+      })
+      .then(drawData => {
+        if (drawData && drawData.isDrawn && Array.isArray(drawData.encryptedAssignments)) {
+          setState(prev => {
+            const syncedState: AppState = {
+              ...prev,
+              draw: {
+                isDrawn: true,
+                drawnAt: drawData.drawnAt || prev.draw.drawnAt,
+                encryptedAssignments: drawData.encryptedAssignments,
+                clearAssignmentsForAdmin: drawData.clearAssignmentsForAdmin || prev.draw.clearAssignmentsForAdmin
+              }
+            };
+            saveAppState(syncedState);
+            return syncedState;
+          });
         }
+      })
+      .catch(err => {
+        console.warn('Utilisation du tirage par défaut :', err);
       });
-    }
   }, []);
 
   const handleUpdateState = (newState: AppState) => {
