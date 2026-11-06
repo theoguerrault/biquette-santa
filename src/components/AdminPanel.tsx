@@ -293,9 +293,10 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ state, onUpdateState, on
               value={passwordAttempt}
               onChange={e => setPasswordAttempt(e.target.value)}
               className={`custom-input ${authError ? 'input-error' : ''}`}
+              autoComplete="current-password"
               autoFocus
             />
-            {authError && <p className="error-message">Mot de passe incorrect (@biquettesanta44@)</p>}
+            {authError && <p className="error-message">Mot de passe incorrect.</p>}
 
             <div className="button-group modal-actions" style={{ marginTop: '1rem' }}>
               <button type="button" onClick={onClose} className="btn-secondary">
