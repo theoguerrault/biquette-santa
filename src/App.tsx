@@ -12,8 +12,31 @@ export const App: React.FC = () => {
   const [state, setState] = useState<AppState>(() => loadAppState());
   const [isAdminOpen, setIsAdminOpen] = useState(false);
   const [snowEnabled, setSnowEnabled] = useState(true);
-  const [soundEnabled, setSoundEnabled] = useState(false);
+  const [soundEnabled, setSoundEnabled] = useState(true);
   const [currentAuth, setCurrentAuth] = useState(() => parseUrlAuth());
+  const soundEnabledRef = React.useRef(soundEnabled);
+  soundEnabledRef.current = soundEnabled;
+
+  // Lecture de la musique par défaut (avec déblocage au premier geste utilisateur si autoplay bloqué par le navigateur)
+  useEffect(() => {
+    toggleBackgroundMusic(true);
+
+    const handleFirstInteraction = () => {
+      if (soundEnabledRef.current) {
+        toggleBackgroundMusic(true);
+      }
+    };
+
+    window.addEventListener('click', handleFirstInteraction, { once: true });
+    window.addEventListener('touchstart', handleFirstInteraction, { once: true });
+    window.addEventListener('keydown', handleFirstInteraction, { once: true });
+
+    return () => {
+      window.removeEventListener('click', handleFirstInteraction);
+      window.removeEventListener('touchstart', handleFirstInteraction);
+      window.removeEventListener('keydown', handleFirstInteraction);
+    };
+  }, []);
 
   // Écouter les changements d'URL
   useEffect(() => {
